@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import { connectDB } from './config/db.js';
 import userRoutes from './routes/userRoutes.js';
 import dashboardRoutes from './routes/dashboardRoutes.js';
+import orderRoutes from './routes/orderRoutes.js';
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/user', userRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/orders', orderRoutes);
 
 // 404
 app.use((req, res) => {
