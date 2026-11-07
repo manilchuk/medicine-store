@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import bcrypt from 'bcryptjs';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -44,10 +45,11 @@ const seed = async () => {
   ]);
 
   // ── Admin user ──────────────────────────────────────────
+  const hashedPassword = await bcrypt.hash('vendor123', 10);
   await User.create({
     name: 'Clayton Santos',
     email: 'vendor@gmail.com',
-    password: 'vendor123', // буде захешовано на кроці 3 (auth)
+    password: hashedPassword,
     role: 'admin',
   });
   console.log('✅ Admin user created: vendor@gmail.com / vendor123');

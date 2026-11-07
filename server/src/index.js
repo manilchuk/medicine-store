@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import { connectDB } from './config/db.js';
+import userRoutes from './routes/userRoutes.js';
 
 const app = express();
 
@@ -12,6 +13,19 @@ app.use(morgan('dev'));
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+app.use('/api/user', userRoutes);
+
+// 404
+app.use((req, res) => {
+  res.status(404).json({ message: 'Not found' });
+});
+
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(err.status || 500).json({ message: err.message || 'Server error' });
 });
 
 const PORT = process.env.PORT || 5000;
