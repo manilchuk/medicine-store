@@ -116,18 +116,16 @@ const seed = async () => {
   await Supplier.insertMany(suppliers);
   console.log(`✅ Suppliers: ${suppliers.length}`);
 
-  // ── Income/Expenses (filter invalid "Error" type) ──────
+  // ── Income/Expenses (keep all types, incl. 'Error') ────
   const rawIncome = await readJSON('Income-Expenses.json');
-  const incomeExpenses = rawIncome
-    .filter((i) => ['Income', 'Expense'].includes(i.type))
-    .map((i) => ({
-      name: i.name,
-      email: i.email || '',
-      amount: parseMoney(i.amount),
-      type: i.type,
-    }));
+  const incomeExpenses = rawIncome.map((i) => ({
+    name: i.name,
+    email: i.email || '',
+    amount: parseMoney(i.amount),
+    type: i.type,
+  }));
   await IncomeExpense.insertMany(incomeExpenses);
-  console.log(`✅ Income/Expenses: ${incomeExpenses.length} (filtered from ${rawIncome.length})`);
+  console.log(`✅ Income/Expenses: ${incomeExpenses.length}`);
 
   console.log('\n🎉 Seeding complete!');
   await mongoose.disconnect();

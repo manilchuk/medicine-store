@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-export const INCOME_TYPES = ['Income', 'Expense'];
+export const INCOME_TYPES = ['Income', 'Expense', 'Error'];
 
 const incomeExpenseSchema = new mongoose.Schema(
   {

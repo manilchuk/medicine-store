@@ -4,6 +4,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import { connectDB } from './config/db.js';
 import userRoutes from './routes/userRoutes.js';
+import dashboardRoutes from './routes/dashboardRoutes.js';
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get('/api/health', (req, res) => {
 });
 
 app.use('/api/user', userRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 // 404
 app.use((req, res) => {
