@@ -1,0 +1,21 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.text {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-black);
+  white-space: nowrap;
+}
