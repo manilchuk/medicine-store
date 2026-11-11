@@ -1,0 +1,130 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  height: 80px;
+  padding: 17px 20px;
+  background-color: var(--color-gray-light);
+  border-bottom: 1px solid rgba(29, 30, 33, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.burger {
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.burger svg {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: var(--color-black);
+  stroke-width: 2;
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  margin: 0;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(29, 30, 33, 0.4);
+}
+
+.subLink {
+  text-decoration: none;
+  color: rgba(29, 30, 33, 0.4);
+  transition: color 0.2s;
+}
+
+.divider {
+  color: rgba(29, 30, 33, 0.4);
+}
+
+.email {
+  color: rgba(29, 30, 33, 0.4);
+}
+
+.logout {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  background-color: var(--color-green);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.logout:hover {
+  background-color: #3f945f;
+}
+
+.logout svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 15px 32px;
+    gap: 16px;
+  }
+
+  .logoIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    padding: 15px 20px;
+    position: relative;
+    gap: 60px;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .logout {
+    display: flex;
+  }
+}

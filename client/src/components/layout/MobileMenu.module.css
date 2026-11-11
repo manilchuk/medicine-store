@@ -1,0 +1,99 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(29, 30, 33, 0.6);
+  display: flex;
+}
+
+.drawer {
+  position: relative;
+  width: 78px;
+  max-width: 80vw;
+  height: 100%;
+  background-color: var(--color-gray-light);
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.close {
+  padding: 0;
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close svg {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: var(--color-black);
+  stroke-width: 2;
+}
+
+.menuWrap {
+  margin-top: 40px;
+}
+
+.logout {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  background-color: var(--color-green);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.logout:hover {
+  background-color: #3f945f;
+}
+
+.logout svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (min-width: 768px) {
+  .drawer {
+    width: 84px;
+  }
+  .menuWrap {
+    margin-top: 48px;
+  }
+  .logout {
+    width: 44px;
+    height: 44px;
+  }
+  .logout svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .overlay {
+    display: none;
+  }
+}
