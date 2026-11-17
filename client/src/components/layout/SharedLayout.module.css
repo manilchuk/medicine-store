@@ -1,9 +1,17 @@
-.layout {
+.root {
   min-height: 100vh;
   min-height: 100dvh;
+  background-color: var(--color-gray-light);
+}
+
+.layout {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-gray-light);
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
 }
 
 .body {
@@ -17,13 +25,27 @@
   padding: 20px;
 }
 
+@media (min-width: 375px) {
+  .layout {
+    width: 375px;
+  }
+}
+
 @media (min-width: 768px) {
+  .layout {
+    width: 768px;
+  }
+
   .main {
     padding: 20px 32px 40px;
   }
 }
 
 @media (min-width: 1440px) {
+  .layout {
+    width: 1440px;
+  }
+
   .main {
     padding: 20px 40px 40px;
   }

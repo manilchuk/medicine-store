@@ -1,0 +1,38 @@
+.avatar,
+.fallback {
+  width: 24px;
+  height: 24px;
+  border-radius: 30px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.avatar {
+  display: block;
+  background-color: #e0e0e0;
+}
+
+.fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-gray-soft);
+}
+
+.fallback svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 768px) {
+  .avatar,
+  .fallback {
+    width: 36px;
+    height: 36px;
+  }
+
+  .fallback svg {
+    width: 18px;
+    height: 18px;
+  }
+}

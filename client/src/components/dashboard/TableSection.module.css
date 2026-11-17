@@ -1,0 +1,75 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border: 1px solid rgba(29, 30, 33, 0.1);
+  border-radius: 8px;
+  min-width: 0;
+  width: 100%;
+  max-width: 335px;
+  overflow: hidden;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 14px;
+  height: 48px;
+  background-color: var(--color-green-soft);
+}
+
+.title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--color-black);
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(29, 30, 33, 0.15) rgba(29, 30, 33, 0.05);
+}
+
+.body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.body::-webkit-scrollbar-track {
+  background-color: rgba(29, 30, 33, 0.05);
+  border-radius: 4px;
+}
+
+.body::-webkit-scrollbar-thumb {
+  background-color: rgba(29, 30, 33, 0.15);
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .section {
+    max-width: 704px;
+  }
+  .head {
+    padding: 20px;
+    height: 64px;
+  }
+  .title {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+  .scrollable {
+    max-height: 448px;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section {
+    max-width: 630px;
+  }
+}

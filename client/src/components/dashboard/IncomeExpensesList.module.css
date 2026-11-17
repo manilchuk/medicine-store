@@ -1,0 +1,107 @@
+.wrapper {
+  padding: 0 14px;
+  color: var(--color-black, #1d1e21);
+}
+
+.subLabel {
+  margin: 0;
+  font-size: 14px;
+  line-height: 46px;
+  color: rgba(29, 30, 33, 0.4);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) auto;
+  column-gap: 28px;
+  align-items: center;
+  padding: 13px 0;
+  border-top: 1px solid rgba(29, 30, 33, 0.1);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  align-self: start;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 80px;
+  height: 24px;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.expense {
+  color: var(--color-red, #e85050);
+  background-color: rgba(232, 80, 80, 0.1);
+}
+
+.income {
+  color: var(--color-green, #59b17a);
+  background-color: rgba(89, 177, 122, 0.1);
+}
+
+.error {
+  color: var(--color-black, #1d1e21);
+  background-color: rgba(29, 30, 33, 0.1);
+}
+
+.name {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.amount {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.amountExpense {
+  color: var(--color-red, #e85050);
+}
+
+.amountIncome {
+  color: var(--color-green, #59b17a);
+}
+
+.amountError {
+  color: var(--color-black, #1d1e21);
+  text-decoration: line-through;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+
+  .subLabel {
+    line-height: 58px;
+  }
+
+  .item {
+    column-gap: 40px;
+    padding: 19px 0;
+  }
+
+  .badge {
+    align-self: center;
+    height: 26px;
+    border-radius: 13px;
+    font-size: 14px;
+  }
+
+  .name,
+  .amount {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

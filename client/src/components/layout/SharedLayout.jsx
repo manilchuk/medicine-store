@@ -9,15 +9,17 @@ export default function SharedLayout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className={styles.layout}>
-      <Header onOpenMenu={() => setIsMobileMenuOpen(true)} />
-      <div className={styles.body}>
-        <Sidebar />
-        <main className={styles.main}>
-          <Outlet />
-        </main>
+    <div className={styles.root}>
+      <div className={styles.layout}>
+        <Header onOpenMenu={() => setIsMobileMenuOpen(true)} />
+        <div className={styles.body}>
+          <Sidebar />
+          <main className={styles.main}>
+            <Outlet />
+          </main>
+        </div>
+        <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
       </div>
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
     </div>
   );
 }
