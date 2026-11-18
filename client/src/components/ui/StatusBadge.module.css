@@ -1,0 +1,61 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 23px;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  border-radius: 40px;
+}
+
+.completed,
+.delivered,
+.active,
+.income {
+  color: var(--color-green);
+  background-color: rgba(89, 177, 122, 0.1);
+}
+
+.confirmed {
+  color: #8059e4;
+  background-color: rgba(128, 89, 228, 0.1);
+}
+
+.pending {
+  color: #f79042;
+  background-color: rgba(247, 144, 66, 0.1);
+}
+
+.cancelled,
+.deactive,
+.expense {
+  color: var(--color-red);
+  background-color: rgba(232, 80, 80, 0.1);
+}
+
+.processing {
+  color: #70a6e8;
+  background-color: rgba(112, 166, 232, 0.1);
+}
+
+.shipped {
+  color: #8a94a6;
+  background-color: rgba(138, 148, 166, 0.1);
+}
+
+.error,
+.default {
+  color: var(--color-black);
+  background-color: rgba(29, 30, 33, 0.1);
+}
+
+@media (min-width: 768px) {
+  .badge {
+    height: 25px;
+    font-size: 14px;
+  }
+}

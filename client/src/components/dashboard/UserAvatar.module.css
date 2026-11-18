@@ -1,31 +1,30 @@
-.avatar,
-.fallback {
-  width: 24px;
-  height: 24px;
-  border-radius: 30px;
-  flex-shrink: 0;
-  object-fit: cover;
-}
-
-.avatar {
-  display: block;
-  background-color: #e0e0e0;
-}
-
 .fallback {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-gray-soft);
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .fallback svg {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
+  fill: var(--color-white);
+}
+
+.initials {
+  font-family: var(--font-inter);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-white);
+  line-height: 1;
+  letter-spacing: 0.02em;
 }
 
 @media (min-width: 768px) {
-  .avatar,
   .fallback {
     width: 36px;
     height: 36px;
@@ -34,5 +33,9 @@
   .fallback svg {
     width: 18px;
     height: 18px;
+  }
+
+  .initials {
+    font-size: 14px;
   }
 }

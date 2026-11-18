@@ -1,8 +1,8 @@
 import styles from './TableSection.module.css';
 
-export default function TableSection({ title, children, scrollable = false }) {
+export default function TableSection({ title, children, scrollable = false, fullWidth = false }) {
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${fullWidth ? styles.fullWidth : ''}`}>
       <div className={styles.head}>
         <h2 className={styles.title}>{title}</h2>
       </div>

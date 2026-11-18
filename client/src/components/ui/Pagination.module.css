@@ -1,0 +1,60 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.dot {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background-color: rgba(89, 177, 122, 0.15);
+  border-radius: 50%;
+  transition:
+    background-color 0.2s,
+    inset 0.2s;
+}
+
+.dot:hover::before {
+  background-color: rgba(89, 177, 122, 0.35);
+}
+
+.dot:focus-visible {
+  outline: 2px solid var(--color-green, #59b17a);
+  outline-offset: 2px;
+}
+
+.active::before,
+.active:hover::before {
+  inset: 0;
+  background-color: var(--color-green, #59b17a);
+}
+
+@media (min-width: 768px) {
+  .pagination {
+    gap: 13px;
+    margin-top: 23px;
+  }
+
+  .dot {
+    width: 14px;
+    height: 14px;
+  }
+
+  .dot::before {
+    inset: 2px;
+  }
+}
