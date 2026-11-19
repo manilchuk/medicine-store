@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   height: 23px;
+  min-width: 76px;
   padding: 0 12px;
   font-size: 12px;
   font-weight: 500;
@@ -56,6 +57,7 @@
 @media (min-width: 768px) {
   .badge {
     height: 25px;
+    min-width: 89px;
     font-size: 14px;
   }
 }
