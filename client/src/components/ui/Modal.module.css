@@ -1,0 +1,83 @@
+/* Doubled class selectors beat MUI's emotion styles regardless of injection order. */
+.backdrop.backdrop {
+  background-color: rgba(29, 30, 33, 0.3);
+}
+
+.paper.paper {
+  position: relative;
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  max-width: 335px;
+  max-height: calc(100% - 40px);
+  margin: 20px;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+.header {
+  padding: 40px 20px 0;
+}
+
+.title {
+  margin: 0;
+  padding-right: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.17;
+  color: var(--color-black);
+}
+
+.close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  color: var(--color-black);
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.close svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+}
+
+.close:hover,
+.close:focus-visible {
+  background-color: rgba(29, 30, 33, 0.08);
+}
+
+.body {
+  padding: 20px 20px 40px;
+}
+
+@media (min-width: 768px) {
+  .paper.paper {
+    width: 536px;
+    max-width: 536px;
+  }
+
+  .header {
+    padding: 40px 40px 0;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .body {
+    padding: 40px;
+  }
+}
