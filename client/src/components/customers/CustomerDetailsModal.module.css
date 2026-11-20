@@ -1,0 +1,193 @@
+.state {
+  margin: 0;
+  padding: 20px 0;
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: center;
+  color: rgba(29, 30, 33, 0.4);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile > :first-child {
+  width: 48px;
+  height: 48px;
+}
+
+.profile > div {
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-black);
+  overflow-wrap: anywhere;
+}
+
+.email {
+  margin: 4px 0 0;
+  font-size: 12px;
+  line-height: 1.33;
+  color: rgba(29, 30, 33, 0.4);
+  overflow-wrap: anywhere;
+}
+
+.info {
+  margin-top: 20px;
+}
+
+.infoRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(29, 30, 33, 0.1);
+}
+
+.label {
+  flex-shrink: 0;
+  font-size: 12px;
+  line-height: 1.33;
+  color: rgba(29, 30, 33, 0.4);
+}
+
+.value {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  text-align: right;
+  color: var(--color-black);
+  overflow-wrap: anywhere;
+}
+
+.ordersSection {
+  margin-top: 20px;
+}
+
+.ordersTitle {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  color: var(--color-black);
+}
+
+.empty {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.33;
+  color: rgba(29, 30, 33, 0.4);
+}
+
+.ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(29, 30, 33, 0.15) transparent;
+}
+
+.orderItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-shrink: 0;
+  padding: 12px 14px;
+  background-color: var(--color-gray-light);
+  border-radius: 12px;
+}
+
+.orderDate {
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--color-black);
+}
+
+.orderPrice {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  color: var(--color-green);
+}
+
+@media (min-width: 768px) {
+  .state {
+    font-size: 16px;
+  }
+
+  .profile {
+    gap: 16px;
+  }
+
+  .profile > :first-child {
+    width: 56px;
+    height: 56px;
+  }
+
+  .name {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .email {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  .info {
+    margin-top: 24px;
+  }
+
+  .infoRow {
+    padding: 16px 0;
+  }
+
+  .label,
+  .value {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  .ordersSection {
+    margin-top: 24px;
+  }
+
+  .ordersTitle {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .empty {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  .orderItem {
+    padding: 14px 16px;
+  }
+
+  .orderDate,
+  .orderPrice {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+}
